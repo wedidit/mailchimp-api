@@ -47,18 +47,6 @@ class MailChimpTest extends TestCase
         $this->assertSame(array(), $MailChimp->getLastRequest());
     }
 
-    /**
-     * @throws \Exception
-     */
-    public function testSubscriberHash()
-    {
-        $email    = 'Foo@Example.Com';
-        $expected = md5(strtolower($email));
-        $result   = MailChimp::subscriberHash($email);
-
-        $this->assertEquals($expected, $result);
-    }
-
     public function testResponseState()
     {
         $MC_API_KEY = getenv('MC_API_KEY');

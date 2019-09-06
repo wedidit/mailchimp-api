@@ -79,18 +79,6 @@ class MailChimp
 
 
     /**
-     * Convert an email address into a 'subscriber hash' for identifying the subscriber in a method URL
-     *
-     * @param   string $email The subscriber's email address
-     *
-     * @return  string          Hashed version of the input
-     */
-    public static function subscriberHash($email)
-    {
-        return md5(strtolower($email));
-    }
-
-    /**
      * Was the last request successful?
      *
      * @return bool  True for success, false for failure
